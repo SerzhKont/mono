@@ -25,16 +25,9 @@ else
   puts response.body
 end
 
-account = client_info['accounts'].find { |acc| acc['type'] == 'fop' }
+account_id = client_info['accounts'].find { |acc| acc['type'] == 'fop' }&.dig('id')
 
-if account
-  account_id = account['id']
-  puts "ID счёта ФОП: #{account_id}"
-else
-  puts "Счёт типа fop не найден"
-end
-
-response = connection.get("/personal/statement/#{account_id}/#{time_from}")
+response = connection.get("/personal/statement/#{account_id}/#{time_from}/#{time_to}")
 
 if response.success?
   bank_statement = JSON.parse(response.body)
