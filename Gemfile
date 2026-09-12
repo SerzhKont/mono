@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # gem "rails"
 
-gem "faraday", "~> 2.14"
+gem 'faraday', '~> 2.14'
 
-gem "fileutils", "~> 1.8"
+gem 'fileutils', '~> 1.8'
 
-gem "json", "~> 3.0"
+gem 'json', '~> 3.0'
 
-gem "dotenv", "~> 3.2"
+gem 'dotenv', '~> 3.2'
+
+gem 'kdl', '~> 2.2'
