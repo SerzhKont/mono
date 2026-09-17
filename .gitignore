@@ -56,3 +56,7 @@ Gemfile.lock
 # .rubocop-https?--*
 .solargraph.yml
 config.kdl
+
+# Выгрузки и логи содержат персональные и финансовые данные
+export/
+logs/
